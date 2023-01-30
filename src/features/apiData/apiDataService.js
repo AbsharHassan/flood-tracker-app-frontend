@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // const API_URL = '/api/'
-const API_URL = 'https://flood-tracker-app-api.onrender.com/'
+const API_URL = 'https://flood-tracker-app-api.onrender.com/api/'
 
 // Get districts' polygon coordinates
 const getPolygons = async () => {

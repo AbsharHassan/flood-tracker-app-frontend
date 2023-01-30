@@ -8,7 +8,7 @@ import useAxios from '../../utils/useAxios'
 // let privAxios = useAxios()
 
 // const API_URL = '/api/'
-const API_URL = 'https://flood-tracker-app-api.onrender.com/'
+const API_URL = 'https://flood-tracker-app-api.onrender.com/api/'
 
 // Check if admin exits
 const checkAdmin = async () => {
