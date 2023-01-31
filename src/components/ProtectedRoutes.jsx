@@ -8,7 +8,8 @@ const ProtectedRoutes = () => {
   const { registerAllowed, user } = useSelector((state) => state.auth)
 
   const guard = () => {
-    // console.log(location)
+    console.log(location)
+
     if (location.pathname === '/register') {
       if (registerAllowed) {
         return <Outlet />
