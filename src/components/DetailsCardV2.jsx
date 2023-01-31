@@ -34,7 +34,7 @@ const DetailsCardV2 = ({
             </div>
             <div className="w-full flex items-baseline ">
               <div
-                className={`max-h-4 mt-1.5 py-0.5 px-1  rounded-sm  flex items-center ${
+                className={`max-h-4 mt-1.5 py-0.5 px-1  rounded-sm  flex items-baseline ${
                   difference.polarity
                     ? 'bg-[#2cb57e2e] text-[#2cb57e]'
                     : 'bg-[#f56e502e] text-[#f56e50]'
@@ -50,7 +50,7 @@ const DetailsCardV2 = ({
                   </div>
                 )}
 
-                <div className="ml-1 h-full text-[10.5px] flex items-baseline">
+                <div className="ml-1 h-full text-[10.5px] flex items-center">
                   {!isNaN(difference.value)
                     ? Math.abs(difference.value)
                     : 'N/A'}
