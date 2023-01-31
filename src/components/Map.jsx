@@ -40,7 +40,9 @@ const Map = ({ center, zoom, backendData }) => {
   )
 
   const [apiDataArray, setApiDataArray] = useState([])
-  const [apiPolygonArray, setApiPolygonArray] = useState([])
+  const [apiPolygonArray, setApiPolygonArray] = useState(
+    geoFormattedPolygons ? geoFormattedPolygons : []
+  )
   const [apiFloodDataArray, setApiFloodDataArray] = useState([])
   const [apiRoadCoords, setApiRoadCoords] = useState([])
   const [nativeMap, setNativeMap] = useState(null)
