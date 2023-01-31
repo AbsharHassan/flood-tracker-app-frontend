@@ -41,14 +41,16 @@ const DetailsCardV2 = ({
                 }`}
               >
                 {!isNaN(difference.value) && (
-                  <TiArrowUpThick
-                    className={`text-[10.5px] duration-200 ${
-                      difference.polarity ? 'rotate-180' : 'rotate-0'
-                    }`}
-                  />
+                  <div className="h-full flex items-center">
+                    <TiArrowUpThick
+                      className={`text-[10.5px] duration-200 ${
+                        difference.polarity ? 'rotate-180' : 'rotate-0'
+                      }`}
+                    />
+                  </div>
                 )}
 
-                <div className="ml-1 text-[10.5px]">
+                <div className="ml-1 h-full text-[10.5px] flex items-baseline">
                   {!isNaN(difference.value)
                     ? Math.abs(difference.value)
                     : 'N/A'}
