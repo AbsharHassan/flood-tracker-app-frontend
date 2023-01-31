@@ -249,7 +249,9 @@ const Map = ({ center, zoom, backendData }) => {
     })
   }
 
-  const handleApiLoaded = (map, maps, MapOptions) => {
+  const handleApiLoaded = (map, maps) => {
+    console.log('the map handle api has been called')
+
     const newCoordsPakArrayReducedArray = [].concat(...newCoordsPak)
 
     const holePolygonCoords = newCoordsPakArrayReducedArray.map(
