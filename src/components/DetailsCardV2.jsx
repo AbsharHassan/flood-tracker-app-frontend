@@ -32,7 +32,7 @@ const DetailsCardV2 = ({
                 {units}
               </span>
             </div>
-            <div className="w-full flex items-baseline">
+            <div className="w-full flex items-baseline ">
               <div
                 className={`max-h-4 mt-1.5 py-0.5 px-1  rounded-sm  flex items-center ${
                   difference.polarity
@@ -42,13 +42,13 @@ const DetailsCardV2 = ({
               >
                 {!isNaN(difference.value) && (
                   <TiArrowUpThick
-                    className={`text-[10.5px] mt-[0.25px] duration-200 ${
+                    className={`text-[10.5px] duration-200 ${
                       difference.polarity ? 'rotate-180' : 'rotate-0'
                     }`}
                   />
                 )}
-                &nbsp;
-                <div className="text-[10.5px]">
+
+                <div className="ml-1 text-[10.5px]">
                   {!isNaN(difference.value)
                     ? Math.abs(difference.value)
                     : 'N/A'}
