@@ -43,7 +43,9 @@ const Map = ({ center, zoom, backendData }) => {
   const [apiPolygonArray, setApiPolygonArray] = useState(
     geoFormattedPolygons ? geoFormattedPolygons : []
   )
-  const [apiFloodDataArray, setApiFloodDataArray] = useState([])
+  const [apiFloodDataArray, setApiFloodDataArray] = useState(
+    selectedFloodData ? selectedFloodData.results.resultsArray : []
+  )
   const [apiRoadCoords, setApiRoadCoords] = useState([])
   const [nativeMap, setNativeMap] = useState(null)
   const [nativeMaps, setNativeMaps] = useState(null)
@@ -295,7 +297,7 @@ const Map = ({ center, zoom, backendData }) => {
     console.log(apiPolygonArray)
 
     const districtPolygons = apiPolygonArray.map((geometryObject) => {
-      console.log(geometryObject)
+      // console.log(geometryObject)
 
       const floodDataObject = apiFloodDataArray.find(
         (floodObj) => floodObj.name === geometryObject.name
