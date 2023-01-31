@@ -177,6 +177,7 @@ const Map = ({ center, zoom, backendData }) => {
   }, [apiFloodDataArray, showRoadsFor])
 
   const nativeApiHandler = (map, maps) => {
+    console.log('native api handler called')
     let source
     polygonArray.map((polygon) => {
       polygon.setMap(map)
@@ -289,7 +290,11 @@ const Map = ({ center, zoom, backendData }) => {
       dispatch(selectDistrict(null))
     })
 
-    const districtPolygons = apiPolygonArray.map((geometryObject, index) => {
+    console.log(apiPolygonArray)
+
+    const districtPolygons = apiPolygonArray.map((geometryObject) => {
+      console.log(geometryObject)
+
       const floodDataObject = apiFloodDataArray.find(
         (floodObj) => floodObj.name === geometryObject.name
       )
@@ -306,6 +311,8 @@ const Map = ({ center, zoom, backendData }) => {
         uncovered: false,
       })
     })
+
+    console.log(districtPolygons)
 
     createRoot(mapDistrictsLegendElRef.current).render(
       <Provider store={store}>
