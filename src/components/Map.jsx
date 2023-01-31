@@ -212,7 +212,7 @@ const Map = ({ center, zoom, backendData }) => {
         await axios
           .post(
             // `http://127.0.0.1:5000/api/district`,
-            `/api/flood-data/district`,
+            `https://flood-tracker-app-api.onrender.com/api/api/flood-data/district`,
             {
               afterStart: selectedPeriodDates[0],
               afterEnd: selectedPeriodDates[1],
