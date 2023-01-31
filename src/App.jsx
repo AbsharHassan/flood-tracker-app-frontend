@@ -253,7 +253,7 @@ function App() {
         </CSSTransition>
       </SwitchTransition>
 
-      {/* <div className="fixed inset-x-0 top-0 overflow-hidden -z-20 transform-gpu blur-xl sm:blur-3xl">
+      <div className="fixed inset-x-0 top-0 overflow-hidden -z-20 transform-gpu blur-xl sm:blur-3xl">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
@@ -282,7 +282,7 @@ function App() {
             </linearGradient>
           </defs>
         </svg>
-      </div> */}
+      </div>
     </>
   )
 }

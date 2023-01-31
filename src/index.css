@@ -225,28 +225,20 @@
   height: var(--loader-height);
   width: var(--loader-width);
   opacity: 0;
-  transform: translateX(calc(-1 * var(--loader-width/2)));
 
-  animation: loading 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite
-    alternate;
+  animation: loading 1s cubic-bezier(0.65, 0.05, 0.36, 1) infinite alternate;
 }
 
 @keyframes loading {
-  /* to {
-    transform: translate(calc(var(--loader-box-width)));
-    opacity: 1;
-  } */
   50% {
-    transform: translate(
-      calc((var(--loader-box-width) - var(--loader-width)) / 2)
-    );
     opacity: 1;
   }
+
   100% {
+    opacity: 0;
     transform: translate(
       calc(var(--loader-box-width) - calc(var(--loader-width)))
     );
-    /* opacity: 0; */
   }
 }
 

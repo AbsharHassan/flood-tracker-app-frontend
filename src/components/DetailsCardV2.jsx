@@ -41,7 +41,7 @@ const DetailsCardV2 = ({
                 }`}
               >
                 {!isNaN(difference.value) && (
-                  <div className="h-full flex items-center">
+                  <div className="h-full relative">
                     <TiArrowUpThick
                       className={`text-[10.5px] duration-200 ${
                         difference.polarity ? 'rotate-180' : 'rotate-0'
